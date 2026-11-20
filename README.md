@@ -4,8 +4,11 @@
 silicon Macs: each container in its own VM, behind a Docker-compatible API.
 
 ```sh
+brew trust gleicon/pratico
 brew install --cask gleicon/pratico/pratico
 ```
+
+Homebrew loads casks only from taps you trust; `brew trust` is needed once.
 
 Requires macOS 26 on Apple silicon. Pratico is not notarized by Apple yet: approve its
 first launch once in System Settings › Privacy & Security (**Open Anyway**).
