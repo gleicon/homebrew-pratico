@@ -8,17 +8,17 @@ cask "pratico" do
   homepage "https://github.com/gleicon/pratico"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Pratico.app"
 
   # The optional boot job that links /var/run/docker.sock; the link itself is left alone,
   # since it may be another tool's, and macOS empties /var/run at boot.
-  uninstall quit:      "dev.pratico.menubar",
-            launchctl: [
+  uninstall launchctl: [
               "dev.pratico.daemon",
               "dev.pratico.socket",
             ],
+            quit:      "dev.pratico.menubar",
             delete:    "/Library/LaunchDaemons/dev.pratico.socket.plist"
 
   # Containers, images, and volumes live in ~/.pratico: --zap deletes them.
