@@ -1,6 +1,6 @@
 cask "pratico" do
-  version "0.2.28"
-  sha256 "ecf8d4fc6609592c9c8289d812c128ac71d3635f4ef04c6a3e2a34c7607a3cb4"
+  version "0.3.0"
+  sha256 "6303aeff2f330a3e604f0a859045d2fa748b2d5efe0833011a5e862ac9f6a373"
 
   url "https://github.com/gleicon/pratico/releases/download/v#{version}/Pratico-#{version}.dmg"
   name "Pratico"
